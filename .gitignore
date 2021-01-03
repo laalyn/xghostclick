@@ -1,0 +1,9 @@
+runners/
+launch
+runners.txt
+keybinds.txt
+settings.txt
+ 
+cmake-build-*/
+.idea/
+*.iml
