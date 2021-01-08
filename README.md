@@ -17,6 +17,7 @@ Make sure you're running X, not Wayland. Then check if you have the X utilities 
 Before your first run, build with `./build.sh`. Invoke the program with `./launch path_to_config`, where `path_to_config` is the relative path to your config file.
 
 ## configuring
+Sample config: https://gist.github.com/laalyn/5ce78d6ba2cd97d1a5b3c4c1cef61ffd<Br><br>
 A config is just a `.txt` file, since I'm too stoopid to use JSON or anything fancier. Since this program isn't installed globally, I recommend storing your configs under `configs/` in the project root. The build script makes the folder just for you, and it's also gitignored! <br><Br>
 You define global settings with `!GLOBAL setting value`, and a keybind to specified autoclicker parameters with `!ENTRY trigger state type id , state type id , ... ; value value ...`. Everything else is treated as a comment.<br>
 #### Global settings: 
