@@ -9,5 +9,5 @@ if (NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE RELEASE)
 endif ()
 
-FILE(GLOB_RECURSE SOURCES source/*.cxx source/*.c++ source/*.C source/*.cpp source/*.cc)
+FILE(GLOB_RECURSE SOURCES src/*.cxx src/*.c++ src/*.C src/*.cpp src/*.cc)
 add_executable(xghostclick ${SOURCES})

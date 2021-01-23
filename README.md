@@ -14,11 +14,11 @@ You'll still get ratted out if you use this tool improperly. Using a bad config,
 Make sure you're running X, not Wayland. Then check if you have the X utilities `xinput` and `xdotool` installed. If not, go and install them.
 
 ## using this tool
-Before your first run, build with `./build.sh`. Invoke the program with `./launch path_to_config`, where `path_to_config` is the relative path to your config file.
+Before your first run, build with `./build.sh`. Invoke the program with `./launch path_to_config`, where `path_to_config` is the path to your config file.
 
 ## configuring
-Sample config: https://gist.github.com/laalyn/5ce78d6ba2cd97d1a5b3c4c1cef61ffd<Br><br>
-A config is just a `.txt` file, since I'm too stoopid to use JSON or anything fancier. Since this program isn't installed globally, I recommend storing your configs under `configs/` in the project root. The build script makes the folder just for you, and it's also gitignored! <br><Br>
+Sample config: https://gist.github.com/laalyn/5ce78d6ba2cd97d1a5b3c4c1cef61ffd <Br><br>
+A config is just a `.txt` file, since I'm too stoopid to use JSON or anything fancier. Since this program isn't installed globally, I recommend storing your configs under `config/` in the project root. The build script makes the folder just for you, and it's also gitignored! <br><Br>
 You define global settings with `!GLOBAL setting value`, and a keybind to specified autoclicker parameters with `!ENTRY trigger state type id , state type id , ... ; value value ...`. Everything else is treated as a comment.<br>
 #### Global settings: 
 * Verbosity `verbosity value`
@@ -55,5 +55,11 @@ You define global settings with `!GLOBAL setting value`, and a keybind to specif
   * 21st and 22nd value: defines range of when to terminate the regeneration process based off of how many iterations already occured during the process. <br><br>
 * IMPORTANT: You will probably need to compensate for the extra delay caused by slower timing. Keep scaling the ranges and numbers while testing to see if it looks better. <br><br>
 * Example: `!ENTRY toggle down key 66 ; button 1 9 19 31 47 11 19 13 21 9 25 31 69 9 25 35 70 2 6 90 150` makes you a semi-sweat pvper every time you toggle with CAPS_LOCK, clicking 8-12 cps assuming timing is set at 10ms.
+
+## TODO undocumented features
+* multiple config files can be passed / more config file syntax
+* can either specify path to config, or just name from configs folder
+* interrupt an entry on configured key, then resume on another (auto disable on hotbar switch basically)
+* key event delay obfuscation
   
 ### enjoy <3

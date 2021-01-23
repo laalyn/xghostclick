@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 
-mkdir cmake-build-release
-cd cmake-build-release &&
+mkdir build
+cd build &&
 cmake ../ &&
 make -j 4 &&
 cd .. &&
-mkdir configs
-ln -s cmake-build-release/xghostclick launch
+mkdir config
+ln -s build/xghostclick launch

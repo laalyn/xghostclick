@@ -1,6 +1,7 @@
-configs/
+config/
 launch
  
+build/
 cmake-build-*/
 .idea/
 *.iml
