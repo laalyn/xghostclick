@@ -23,17 +23,6 @@ namespace modules::clicker {
         drange min_delay, max_delay, delay;
         drange percent_down;
         drange to_recalc;
-        // deprecated in favor of above
-        // int prev_min_delay, prev_max_delay;
-        // int prev_min_delay_delta, prev_max_delay_delta;
-        // int min_delay = prev_min_delay, max_delay = prev_max_delay;
-        // int min_delay_delta = prev_min_delay_delta, max_delay_delta = prev_max_delay_delta;
-        // int prev_delay = 0, prev_delay_delta;
-        // int delay = prev_delay, delay_delta = prev_delay_delta;
-        // int prev_percent_down, prev_percent_down_delta;
-        // int percent_down = prev_percent_down, percent_down_delta = prev_percent_down_delta;
-        // int prev_to_recalc, prev_to_recalc_delta;
-        // int to_recalc = prev_to_recalc, to_recalc_delta = prev_to_recalc_delta;
         int its = 0;
     };
 

@@ -22,10 +22,20 @@ bool utils::input::is_down(int const state_id, int const device_id, type const t
 
     FILE *pipe = popen(cmd.c_str(), "r");
 
-    char buf[32];
+    char buf[32]{0};
     char *ret_cstr = fgets(buf, sizeof buf, pipe);
 
     fclose(pipe); // <-- fixes segfault
+
+    if (ret_cstr == nullptr) {
+        if (settings::verbosity >= 1) {
+            std::cout << "WARNING: ret_cstr is null !!" << std::endl;
+            std::cout << "    called: " << cmd << std::endl;
+            std::cout << "    maybe check your config file ?" << cmd << std::endl;
+        }
+
+        return false;
+    }
 
     std::string ret(ret_cstr);
     if (ret.substr(ret.size() - 5, 4) == "down") {

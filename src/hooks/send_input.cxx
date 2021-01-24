@@ -5,6 +5,8 @@
 
 #include <iostream>
 
+using namespace hooks::send_input;
+
 void hooks::send_input::start() {
     while (true) {
         utils::time::timestamp st = utils::time::cur();
